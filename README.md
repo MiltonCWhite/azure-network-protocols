@@ -39,7 +39,7 @@
 <p><img src="https://i.imgur.com/PHOwjLh.png" width="100%" alt="Windows VM"></p>
 
 <p>Now, create an Ubuntu Virtual Machine in the same Resource Group. Again, allow Azure to generate the associated VNet and Subnet. Choose the password login option.</p>
-<p><img src="https://i.imgur.com/N5zwQUH.png" width="100%" alt="Ubuntu VM"></p>
+<p><img src="https://github.com/user-attachments/assets/793e785c-2b56-40d2-b752-12ffc0f33c5e" width="100%" alt="Ubuntu VM"></p>
 
 <p>Use Network Watcher to verify your network's structure and connectivity:</p>
 <p><img src="https://i.imgur.com/Pn02GXF.png" width="100%" alt="Network Watcher"></p>
@@ -48,11 +48,11 @@
 <h3 align="center">Capturing ICMP (Ping) Activity</h3>
 <br>
 <p>Access the Windows VM remotely, install Wireshark, and filter the display to show only ICMP traffic.</p>
-<p><img src="https://i.imgur.com/0BsfNiS.jpg" width="100%" alt="Microsoft Remote Desktop - Mac"></p>
+<p><img src="https://github.com/user-attachments/assets/07be0200-5d7c-4750-bf13-0ddf524298bb" width="100%" alt="Microsoft Remote Desktop - Mac"></p>
 
 <p>Locate your Ubuntu VM’s internal IP and send ping requests from the Windows VM. Check Wireshark for request/reply patterns:</p>
-<p><img src="https://i.imgur.com/yYGKuAy.png" width="100%" alt="Ubuntu private IP">
-<img src="https://i.imgur.com/3h9QSEY.png" width="100%" alt="ICMP traffic - private IP"></p>
+<p><img src="https://github.com/user-attachments/assets/e5a3899c-3a88-4c34-a838-5cdcaadf66c4" width="100%" alt="Ubuntu private IP">
+<img src="https://github.com/user-attachments/assets/574081df-ead6-4ad4-9f33-db8189ad9804" width="100%" alt="ICMP traffic - private IP"></p>
 
 <p>Try pinging a public domain like google.com and watch for related traffic in Wireshark:</p>
 <p><img src="https://i.imgur.com/YduMvc7.png" width="100%" alt="ICMP traffic - public IP"></p>
@@ -61,8 +61,8 @@
 <p><img src="https://i.imgur.com/bihftKK.png" width="100%" alt="ICMP traffic - perpetual ping"></p>
 
 <p>Modify the NSG settings on the Ubuntu VM to block ICMP and view the dropped traffic results in Wireshark and the command prompt:</p>
-<p><img src="https://i.imgur.com/ovGk5dq.png" width="100%" alt="ICMP traffic - blocked">
-<img src="https://i.imgur.com/NjuUANI.png" width="100%" alt="ICMP traffic - denied"></p>
+<p><img src="https://github.com/user-attachments/assets/c15d6370-9684-499b-b889-3f57f337f805" width="100%" alt="ICMP traffic - blocked">
+<img src="https://github.com/user-attachments/assets/e53988ae-3f38-4cda-899b-be489ffe6a8e" width="100%" alt="ICMP traffic - denied"></p>
 
 <p>Re-enable ICMP in the NSG and check if connectivity resumes. End the continuous ping afterward:</p>
 <p><img src="https://i.imgur.com/nZbl2sA.png" width="100%" alt="ICMP traffic - allowed again"></p>
@@ -72,14 +72,14 @@
 <br>
 <p>Filter Wireshark for SSH data. From your Windows VM, establish an SSH session to the Ubuntu server using its internal IP. Run some commands (like <code>ls</code> or <code>pwd</code>) to generate traffic.</p>
 <p>End the session by typing <code>exit</code> and pressing Enter.</p>
-<p><img src="https://i.imgur.com/6YEDJKu.png" width="100%" alt="SSH traffic"></p>
+<p><img src="https://github.com/user-attachments/assets/d1306bbf-f775-4392-8107-8456a98face0" width="100%" alt="SSH traffic"></p>
 
 <br><br>
 <h3 align="center">Watching DHCP Communications</h3>
 <br>
 <p>Switch Wireshark to view only DHCP traffic. On the Windows VM, run <code>ipconfig /renew</code> to request a new IP.</p>
 <p>Observe DHCP discovery, offer, request, and acknowledgment in Wireshark:</p>
-<p><img src="https://i.imgur.com/mKyAHFr.png" width="100%" alt="DHCP traffic"></p>
+<p><img src="https://github.com/user-attachments/assets/50bcaf3d-7047-42b2-84e3-016bc0561694" width="100%" alt="DHCP traffic"></p>
 
 <br><br>
 <h3 align="center">Viewing DNS Query Activity</h3>
